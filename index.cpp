@@ -64,4 +64,95 @@ int main()
     return 0;
 }
 //problem 4
+#include <bits/stdc++.h>
+using namespace std;
+#define long long int li
+
+int main()
+{
+   int t;
+   cin >> t;
+   for(int i = 1; i<=t;i++){
+    int num;
+    cin >> num;
+     cout<<"Case "<<t<<": ";
+    for(int i = 1;i<=num; i++){
+        if(num% i== 0){
+            cout << i << " ";
+        }
+
+        }
+        cout << num << endl;
+   }
+   return 0;
+}
+//problem 5
+#include <bits/stdc++.h>
+using namespace std;
+#define long long int li
+
+int main()
+{
+  int t;
+  cin >> t;
+  while(t--){
+    int n;
+    cin >> n;
+    int firstdigit = n/ 10000;
+    int lastdigit = n % 10;
+    int sum = firstdigit + lastdigit ;
+    cout << " sum = " << sum  << endl;
+  }
+   return 0;
+}
+// problem 6
+#include <bits/stdc++.h>
+using namespace std;
+#define long long int li
+
+int main()
+{
+  int t;
+  cin >> t;
+  for(int i = 1; i<=t; i++){
+    int n;
+    cin >> n;
+    for(int i = 1; i<=n; i++){
+       for(int j = 1; j<=n; j++){
+        cout << '*';
+       }
+       cout << endl;
+    }
+
+  }
+   return 0;
+}
+//problem 7
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+bool isPerfectSquare(long long n) {
+    long long root = sqrt(n);
+    return root * root == n;
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        long long N;
+        cin >> N;
+        if (isPerfectSquare(N)) {
+            cout << "YES" << endl;
+        } else {
+            cout << "NO" << endl;
+        }
+    }
+
+    return 0;
+}
+// problem 8
 
