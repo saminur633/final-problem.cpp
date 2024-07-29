@@ -237,6 +237,159 @@ int main ()
     return 0;
 }
 // problem 12
+#include<bits/stdc++.h>
+using namespace std;
+int countVowels(const string &s) {
+    string vowels = "aeiouAEIOU";
+    int count = 0;
+    for (char c : s) {
+        if (vowels.find(c) != string::npos) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main ()
+{
+     int T;
+    cin >> T;
+    cin.ignore();
+    for (int i = 0 ; i < T; ++i) {
+        string S;
+        getline(cin, S);
+        int vowelCount = countVowels(S);
+        cout << "Number of vowels = " << vowelCount << endl;
+    }
+    return 0;
+}
+// problem 13
+#include<bits/stdc++.h>
+using namespace std;
+int countWords(const string &s) {
+    stringstream ss(s);
+    string word;
+    int count = 0;
+    while (ss >> word) {
+        count++;
+    }
+    return count;
+}
+
+int main() {
+    int T;
+    cin >> T;
+    cin.ignore(); // to ignore the newline character after the number of test cases
+    for (int i = 0; i < T; ++i) {
+        string S;
+        getline(cin, S);
+        int wordCount = countWords(S);
+        cout << " count = " << wordCount << endl;
+    }
+    return 0;
+}
+// problem 14
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main() {
+  int T;
+  cin >> T;
+  while(T--){
+        int r1, r2, B;
+        cin >> r1 >> r2 >> B;
+        int ballsplayed = 300 - B;
+        double currentRunRate = (double)r2 *6 / ballsplayed;
+        int runsRequired = r1- r2+1;
+        double requiredRunRate = (double)runsRequired * 6 / B;
+        cout << fixed << setprecision(2) << currentRunRate << " " << requiredRunRate << endl;
+
+  }
+    return 0;
+}
+// problem 15
+#include<bits/stdc++.h>
+using namespace std;
+int isArmstrong(int n)
+{
+    int number = n;
+    int sum = 0;
+    while(n > 0){
+        int digit = n % 10;
+        sum += pow(digit ,3);
+        n /= 10;
+    }
+    return sum == number;
+
+}
+
+
+int main() {
+    int T;
+    cin >> T;
+    while(T--){
+        int n;
+        cin >> n;
+        if(isArmstrong(n)){
+            cout << n << " is an armstrong number!" << endl;
+        }else
+        {
+            cout << n << " is not an armstrong number!" << endl;
+        }
+    }
+
+    return 0;
+}
+// problem 16
+#include <bits/stdc++.h>
+using namespace std;
+
+int charToNumeric(char c) {
+    return c - 'A' + 1;
+}
+
+int main() {
+    int T;
+    cin >> T;
+    cin.ignore();
+    while (T--) {
+        string s;
+        getline(cin, s);
+        for (char c : s) {
+            cout << charToNumeric(c);
+        }
+        cout << endl;
+    }
+    return 0;
+}
+//problem 17
+ #include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    int t;
+    cin >> t;
+    cin.ignore();
+    while(t--){
+        string s , word;
+        getline(cin ,s);
+        stringstream ss(s);
+        bool first_word = true;
+        while(ss >> word){
+            reverse(word.begin(), word.end());
+            if(!first_word){
+                cout << " ";
+            }
+            cout << word;
+            first_word = false;
+        }
+        cout << endl;
+    }
+    return 0;
+}
+// program 18
 
 
 
