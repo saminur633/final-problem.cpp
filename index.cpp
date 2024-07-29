@@ -155,4 +155,88 @@ int main() {
     return 0;
 }
 // problem 8
+#include<bits/stdc++.h>
+using namespace std;
+int main ()
+{
+    int t;
+    cin >> t;
+    for(int i = 1; i<=t; ++i){
+        int n1, n2,n3;
+        cin >> n1 >> n2 >> n3;
+        int arr[3] = {n1,n2,n3};
+        sort(arr,arr+3);
+        cout << "case " << i << ": " << arr[0] << " " << arr[1] << " " << arr[2] << endl;
+    }
+    return 0;
+}
+// problem 9
+#include<bits/stdc++.h>
+using namespace std;
+int factorial(int n)
+{
+    if(n == 0 || n == 1){
+        return 1;
+    }
+    return n * factorial (n-1);
+
+}
+int main ()
+{
+    int t;
+    cin >> t;
+    int numbers[t];
+    for(int i = 0; i<t; ++i){
+        cin >> numbers[i];
+    }
+    for(int i =0; i<t; ++i){
+        cout << factorial(numbers[i]) << endl;
+    }
+
+    return 0;
+}
+// problem 10
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    int t;
+    cin >> t;
+    cin.ignore();
+    for(int i = 0; i<t; ++i){
+        string line;
+        getline(cin , line);
+        stringstream ss(line);
+
+        int count = 0;
+        string word;
+        while(ss >> word){
+            count++;
+        }
+        cout << count << endl;
+    }
+
+    return 0;
+}
+// problem 11
+#include<bits/stdc++.h>
+using namespace std;
+
+int main ()
+{
+    int t;
+    cin >> t;
+    cin.ignore();
+    for(int i =0; i<t; ++i){
+        string input;
+        getline(cin , input);
+        reverse(input.begin(), input.end());
+        cout << input << endl;
+    }
+    return 0;
+}
+// problem 12
+
+
 
