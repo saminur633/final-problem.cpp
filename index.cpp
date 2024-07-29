@@ -390,6 +390,70 @@ int main ()
     return 0;
 }
 // program 18
+#include<bits/stdc++.h>
+using namespace std;
+double calculateArea(double a, double b, double c)
+{
+    double s = (a+b+c)/2;
+    return sqrt(s*(s-a)*(s-b)*(s-c));
+}
 
+int main ()
+{
+    int T;
+    cin >> T;
+    while(T--){
+        double a, b,c;
+        cin >> a >> b >> c;
+        double area = calculateArea(a,b,c);
+        cout << fixed << setprecision(3) << "Area = " << area << endl;
+
+    }
+    return 0;
+}
+// problem 19
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main ()
+{
+    int T;
+    cin >> T;
+    while(T--){
+       double x;
+       cin >> x;
+       int days = 0;
+       while(x > 1.0){
+        x /= 2;
+        days++;
+       }
+       cout << days << " days " << endl;
+    }
+    return 0;
+}
+// problem 20
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main ()
+{
+    int T;
+    cin >> T;
+    for(int i = 1; i<=T; ++i){
+        int x,k;
+        cin >> x >> k;
+        long long sum = 0;
+        long long term = 1;
+        for(int j =0; j<=k; ++j){
+            sum += term;
+            term *= x;
+        }
+        cout << "Result = " << sum << endl;
+    }
+    return 0;
+}
+// 
 
 
