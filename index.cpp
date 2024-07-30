@@ -454,6 +454,61 @@ int main ()
     }
     return 0;
 }
-// 
+// problem 21
+#include<bits/stdc++.h>
+using namespace std;
+void transformstring(string &s)
+{
+    int n = s.size();
+    for(int i =0; i<n;++i){
+        if(s[i] == 'L' && i > 0 ){
+            s[i] = s[i-1];
+        }else if(s[i] == 'R' && i < n-1){
+
+            s[i] = s[i+1];
+        }
+    }
+
+}
+int main()
+{
+    int T;
+    cin >> T;
+    cin.ignore();
+    while(T--){
+        string s;
+        getline(cin , s);
+        transformstring(s);
+        cout << s << endl;
+    }
+    return 0;
+}
+// problem 22
+#include<iostream>
+using namespace std;
+
+int gcd(int a, int b) {
+    if (b == 0) {
+        return a;
+    }
+    return gcd(b, a % b);
+}
+
+long long lcm(int a, int b) {
+    return (static_cast<long long>(a) / gcd(a, b)) * b;
+}
+
+int main() {
+    int T;
+    cin >> T;
+    while (T--) {
+        int a, b;
+        cin >> a >> b;
+        cout << "LCM = " << lcm(a, b) << endl;
+    }
+    return 0; 
+}
+// problem 23
+
 
 
