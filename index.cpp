@@ -509,6 +509,160 @@ int main() {
     return 0; 
 }
 // problem 23
+#include<bits/stdc++.h>
+using namespace std;
+int countWords(const string &s) {
+    stringstream ss(s);
+    string word;
+    int count = 0;
+    while (ss >> word) {
+        count++;
+    }
+    return count;
+}
+
+int main() {
+    int T;
+    cin >> T;
+    cin.ignore();
+    for (int i = 0; i < T; ++i) {
+        string S;
+        getline(cin, S);
+        int wordCount = countWords(S);
+        cout << " count = " << wordCount << endl;
+    }
+    return 0;
+}
+// problem 24
+#include <iostream>
+#include <string>
+using namespace std;
+
+int countOccurrences(const string &str, char ch) {
+    int count = 0;
+    for (char c : str) {
+        if (c == ch) {
+            count++;
+        }
+    }
+    return count;
+}
+
+int main() {
+    int T;
+    cin >> T;
+    cin.ignore();
+
+    while (T--) {
+        string str;
+        getline(cin, str);
+
+        char ch;
+        cin >> ch;
+        cin.ignore(); // To ignore the newline character after ch
+
+        int count = countOccurrences(str, ch);
+        cout << "Occurrence of '" << ch << "' in '" << str << "' = " << count << endl;
+    }
+
+    return 0;
+}
+// problem 25
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void printAlternateElements(const vector<int> &arr) {
+    for (int i = 0; i < arr.size(); i += 2) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int T;
+    cin >> T;
+
+    while (T--) {
+        int n;
+        cin >> n;
+        vector<int> arr(n);
+
+        for (int i = 0; i < n; ++i) {
+            cin >> arr[i];
+        }
+
+        printAlternateElements(arr);
+    }
+
+    return 0;
+}
+// problem 26
+#include <iostream>
+using namespace std;
+
+void classifyCharacter(char c) {
+    if (c >= 'A' && c <= 'Z') {
+        cout << "Uppercase Character" << endl;
+    } else if (c >= 'a' && c <= 'z') {
+        cout << "Lowercase Character" << endl;
+    } else if (c >= '0' && c <= '9') {
+        cout << "Numerical Digit" << endl;
+    } else {
+        cout << "Special Character" << endl;
+    }
+}
+
+int main() {
+    int T;
+    cin >> T;
+    
+    while (T--) {
+        char c;
+        cin >> c;
+        classifyCharacter(c);
+    }
+    
+    return 0;
+}
+// problem 27
+#include<bits/stdc++.h>
+using namespace std;
+bool ispalindrome(const string &s)
+{
+    int left = 0;
+    int right = s.length() -1;
+    while(left < right){
+        if(s[left] != s[right]){
+            return false;
+        }
+        left++;
+        right --;
+    }
+    return true;
+}
+
+
+
+int main() {
+    int T;
+    cin >> T;
+    while(T--){
+        string s;
+        cin >> s;
+        if(ispalindrome(s)){
+            cout << "Yes! It is Palindrome" << endl;
+        }else{
+            cout << "Sorry! It is not a Palindrome" << endl;
+
+        }
+    }
+
+
+
+    return 0;
+}
+// problem 28
 
 
 
